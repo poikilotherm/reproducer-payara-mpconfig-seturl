@@ -29,7 +29,7 @@ import javax.sql.DataSource;
     properties = {
         // The following options are documented here:
         // https://docs.payara.fish/community/docs/documentation/payara-server/jdbc/advanced-connection-pool-properties.html
-        "fish.payara.log-jdbc-calls=${MPCONFIG=db.log-jdbc-calls:false}"
+        "fish.payara.log-jdbc-calls=${MPCONFIG=db.log-jdbc-calls:blablabla}"
     })
 public class DataSourceProducer {
     @Resource(lookup = "java:app/jdbc/reproducer")
