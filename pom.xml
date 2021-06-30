@@ -31,10 +31,13 @@
         <jakartaee-api.version>8.0.0</jakartaee-api.version>
 
         <!-- Arquillian BOM -->
-        <arquillian-bom.version>1.6.0.Final</arquillian-bom.version>
+        <arquillian-bom.version>1.7.0.Alpha10</arquillian-bom.version>
+        
+        <!-- Shrinkwrap Resolvers BOM -->
+        <shrinkwrap.resolvers.version>3.1.4</shrinkwrap.resolvers.version>
 
         <!-- Test Utilities -->
-        <junit.version>4.13.2</junit.version>
+        <junit.version>5.7.2</junit.version>
         <mockito.version>3.11.2</mockito.version>
         <json-path.version>2.6.0</json-path.version>
         <awaitility.version>4.1.0</awaitility.version>
@@ -64,13 +67,16 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-
+    
+            <!-- https://mvnrepository.com/artifact/org.junit/junit-bom -->
             <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
                 <version>${junit.version}</version>
-                <scope>test</scope>
+                <scope>import</scope>
+                <type>pom</type>
             </dependency>
+            
             <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
             <dependency>
                 <groupId>org.hamcrest</groupId>
@@ -134,37 +140,54 @@
             <artifactId>jakarta.jakartaee-api</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.jboss.arquillian.junit</groupId>
-            <artifactId>arquillian-junit-container</artifactId>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.22</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.arquillian.junit5</groupId>
+            <artifactId>arquillian-junit5-container</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>org.jboss.shrinkwrap.resolver</groupId>
+            <artifactId>shrinkwrap-resolver-impl-maven</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
+            <scope>test</scope>
         </dependency>
         <!--<dependency>
             <groupId>org.awaitility</groupId>
             <artifactId>awaitility</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.skyscreamer</groupId>
             <artifactId>jsonassert</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
             <artifactId>json-path-assert</artifactId>
+            <scope>test</scope>
         </dependency>-->
     </dependencies>
     <build>
