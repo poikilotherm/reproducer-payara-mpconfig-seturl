@@ -39,4 +39,9 @@ public class GreetingServiceTest {
         GreetingMessage message = service.buildGreetingMessage("Jakarta EE");
         Assertions.assertTrue(message.getMessage().startsWith("Say Hello to Jakarta EE at "));
     }
+    
+    @Test
+    public void should_retrieve_property() {
+        Assertions.assertEquals("me", System.getProperty("who"));
+    }
 }

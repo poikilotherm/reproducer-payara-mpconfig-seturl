@@ -303,6 +303,15 @@
                     <version>${arquillian-payara.version}</version>
                     <scope>test</scope>
                 </dependency>
+                
+                <!-- Env Sync -->
+                <dependency>
+                    <groupId>fish.payara.arquillian</groupId>
+                    <artifactId>environment-setup</artifactId>
+                    <version>${arquillian-payara.version}</version>
+                    <scope>test</scope>
+                </dependency>
+
             </dependencies>
             <build>
                 <plugins>
