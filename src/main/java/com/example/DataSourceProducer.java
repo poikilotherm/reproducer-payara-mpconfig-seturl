@@ -20,7 +20,7 @@ import javax.sql.DataSource;
     // defaults must be provided in this Payara-proprietary manner.
     user = "${MPCONFIG=db.user:user}",
     password = "${MPCONFIG=db.password}",
-    url = "jdbc:postgresql://${MPCONFIG=db.host:localhost}:${MPCONFIG=db.port:5432}/${MPCONFIG=db.name:dvn}",
+    url = "jdbc:postgresql://${MPCONFIG=db.host:localhost}:${MPCONFIG=db.port:5432}/${ENV=DB_NAME:dvn}",
     
     // Set more options via MPCONFIG, including defaults where applicable.
     // TODO: Future versions of Payara (the one following 5.2021.4) will support setting
