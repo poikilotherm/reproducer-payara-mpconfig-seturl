@@ -345,7 +345,8 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-failsafe-plugin</artifactId>
                         <version>${maven-failsafe-plugin.version}</version>
-                        <configuration>
+			<configuration>
+			    <argLine>--illegal-access=debug --add-opens=java.base/java.util=ALL-UNNAMED</argLine>
                             <systemPropertyVariables>
                                 <payara.home>${project.build.directory}/payara5</payara.home>
                             </systemPropertyVariables>
