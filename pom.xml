@@ -46,7 +46,7 @@
         <assertj.version>3.20.2</assertj.version>
 
         <!-- Payara server -->
-        <payara.version>5.2021.4</payara.version>
+        <payara.version>5.2021.8</payara.version>
         <arquillian-payara.version>2.4.3</arquillian-payara.version>
 
         <!-- By default, skip tests -->
